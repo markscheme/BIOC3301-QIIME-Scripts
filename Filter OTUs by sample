@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#SBATCH -t 1:00:00
+
+#SBATCH -n 24
+
+#SBATCH -p short
+
+#Load modules
+
+module load eb
+
+module load Miniconda2
+
+# loading virtualenv
+
+source activate qiime1
+
+# setting temporary directory
+
+export TMPDIR=~/qiime_tmp
+
+time filter_samples_from_otu_table.py -i ~/2018_02_smb/OTU_Table_Filtered_By_Taxa.biom --sample_id_fp ~/2018_02_smb/map.tsv -m ~/2018_02_smb/map.tsv -o OTU_Table_Filtered_By_Taxa_And_Sample.biom
+
+source deactivate
