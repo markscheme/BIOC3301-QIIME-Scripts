@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#SBATCH -t 1:00:00
+
+#SBATCH -n 24
+
+#SBATCH -p short
+
+#Load modules
+
+module load eb
+
+module load Miniconda2
+
+# loading virtualenv
+
+source activate qiime1
+
+# setting temporary directory
+
+export TMPDIR=~/qiime_tmp
+
+#Filtering OTUs By Taxa
+
+time filter_taxa_from_otu_table.py -i ~/2018_02_smb/OTUs/otu_table.biom
+-p p__Proteobacteria,p__Acidobacteria -o OTU_Table_Filtered_By_Taxa.biom
+
+#deactivate
+
+source deactivate
