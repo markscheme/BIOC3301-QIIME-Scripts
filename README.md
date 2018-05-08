@@ -1,6 +1,6 @@
 # BIOC3301-QIIME-Scripts
 
-This GitHub Repository contains all the QIIME scripts required to replicate our analysis as described in the main text. The scripts are utilised in the same order as seen in the Materials/Methods and Results sections. Below is a summary of what process each script performs. Further details and help are available here: http://qiime.org/scripts/. Our mapping file (map.tsv) is also included and is adjusted accordingly - removing anomlous samples.
+This GitHub Repository contains all the QIIME scripts required to replicate our analysis as described in the main text. The scripts are utilised in the same order as seen in the Materials/Methods and Results sections. Below is a summary of what process each script performs. Further details and help are available here: http://qiime.org/scripts/. Our mapping file (map.tsv) is also included and is adjusted accordingly.
 
 CDA - AB and PB : Performs core_diversity_analyses.py on .biom table containing OTUs within the Acidobacteria (AB) and Proteobacteria (PB) phyla only.
 
